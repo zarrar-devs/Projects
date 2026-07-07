@@ -178,7 +178,7 @@ class Database {
   }
 
   // get file preview 
-  async getFilePreview(fileId) {
+   getFilePreview(fileId) {
     try {
       let file = this.storage.getFileView({
         bucketId: conf.appwriteBucketId,

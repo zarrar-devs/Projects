@@ -53,6 +53,7 @@ function Landing() {
                 showNote &&
             <div className="absolute z-[10000] p-6 w-2xl text-black bg-gray-200 flex flex-col gap-6 justify-center items-center  left-1/2 -translate-x-1/2 ">
                 <p><span className="text-red-600">Note:</span> This is a functionality-focused project. Please don’t focus on the UI it has simple and decent CSS. This is not responsive for now.</p>
+                <a className="text-blue-600 underline" href="https://github.com/ZarrarATU/Projects">GITHUB </a>
                 <button onClick={handleNoteButton} className="bg-blue-600 text-white p-1 rounded-md w-[80px] cursor-pointer ">OK</button>
             </div>
 
