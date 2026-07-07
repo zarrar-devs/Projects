@@ -1,22 +1,25 @@
 
 import { motion } from 'framer-motion'
 import { useRef } from 'react'
+import { useNavigate } from 'react-router'
 
 export function ResponsiveText({ children, delay = 1, hoverText = 'MORE' }) {
 
   let ref = useRef(null)
   const isDesktop = window.matchMedia('(pointer: fine)').matches
-  
+
+  const navigate = useNavigate()
+
 
   function handleMouseMove(e) {
-    if(isDesktop){
+    if (isDesktop) {
       if (!ref) return
-  
+
       const rect = e.currentTarget.getBoundingClientRect()
-  
+
       const x = e.clientX - rect.left
       const y = e.clientY - rect.top
-  
+
       if (ref.current) {
         ref.current.style.left = `${x}px`
         ref.current.style.top = `${y}px`
@@ -37,6 +40,12 @@ export function ResponsiveText({ children, delay = 1, hoverText = 'MORE' }) {
         document.body.style.overflowX = "hidden"
         ref.current.style.transition = "transform 2s ease, border-radius 2s ease"
         ref.current.style.transform = "translate(-50%, -50%) scale(20)"
+
+
+        setTimeout(() => {
+
+          navigate('/home')
+        }, 1000)
 
       }, 700);
 
@@ -62,7 +71,7 @@ export function ResponsiveText({ children, delay = 1, hoverText = 'MORE' }) {
 
       <span
         ref={ref}
-        style={{display: `${isDesktop ? 'flex' : 'none'}`}}
+        style={{ display: `${isDesktop ? 'flex' : 'none'}` }}
         className='absolute -translate-x-1/2 -translate-y-1/2 p-4 flex flex-col justify-center items-center  pointer-events-none z-[100000] w-[150px] h-[150px] rounded-[50%] bg-white scale-0 group-hover:scale-100  transition-transform duration-300'
       >
         <img className='w-[20px] transition-opacity duration-500' src="/images/up-arrow.svg" alt="->" />
