@@ -10,9 +10,9 @@ import { Account } from "../../common/Account/Account";
 export function Header() {
   const optionsData = [
     { name: "Home", slug: "/home", id: "#fru548u" },
-    { name: "Links", slug: "/links", id: "#gr5h5gu" },
-    { name: "QR Codes", slug: "/qr-code", id: "#g5u5u44" },
-    { name: "Pages", slug: "/pages", id: "#5thu58u" },
+    { name: "Links", slug: "/home", id: "#gr5h5gu" },
+    { name: "QR Codes", slug: "/home", id: "#g5u5u44" },
+    { name: "Pages", slug: "/home", id: "#5thu58u" },
   ];
   const [openMenu, setMobileMenu] = useState(false);
   const navigate = useNavigate();
