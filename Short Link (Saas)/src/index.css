@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+*::selection{
+  background: #ffff;
+  color: black;
+}
+
+body{
+  width: 100%;
+  height: 100%;
+  background: #242126;
+  color: #c4c5ca;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  
+}
+
+input::selection{
+  background: #000;
+  color: white;
+}
+
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #1f272d;
+  border-radius: 9999px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #1f272d;
+  border-radius: 9999px;
+  border: 2px solid #1f272d;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #4b5864;
+}
+
+
+.dash-scroll::-webkit-scrollbar {
+  width: 10px;
+}
+
+.dash-scroll::-webkit-scrollbar-track {
+  background: #09090b;
+  border-radius: 9999px;
+}
+
+.dash-scroll::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    #3f3f46 0%,
+    #27272a 100%
+  );
+  border-radius: 9999px;
+  border: 2px solid #09090b;
+}
+
+.dash-scroll::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    180deg,
+    #52525b 0%,
+    #3f3f46 100%
+  );
+  cursor: grab;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+@theme {
+  --breakpoint-xs: 420px;
+  --breakpoint-xxs: 320px;
+}
+
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+}
+
+

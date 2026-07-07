@@ -1,0 +1,21 @@
+@import "tailwindcss";
+@import "@fontsource/poppins/400.css";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+body {
+  width: 100%;
+  height: 100%;
+  background: #333;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins';
+}
+
+h1 span{
+  font-family: Montserrat;
+}
